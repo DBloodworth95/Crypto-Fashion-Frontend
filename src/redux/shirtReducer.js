@@ -17,17 +17,12 @@ export const ActionCreators = {
 export default function ShirtReducer(state = initialState, action) {
     switch (action.type) {
         case ActionTypes.ADD_SHIRT:
-            console.log("Add triggered");
-            console.log(state.shirts);
             return { ...state, shirts: [...state.shirts, action.payload] };
         case ActionTypes.GET_SHIRTS:
             return { ...state, shirts: [...action.payload] };
         case ActionTypes.DELETE_SHIRT:
-            console.log("Delete 1");
             for (let i = 0; i < state.shirts.length; i++) {
-                console.log("FOUND");
                 if (state.shirts[i].id === action.payload.id) {
-                    console.log("Deleting..");
                     state.shirts.splice(i, 1);
                     break;
                 }

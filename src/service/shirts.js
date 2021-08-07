@@ -43,6 +43,6 @@ export const EditShirt = async (dispatch, shirt) => {
         await axiosInstance.put('', shirt);
         dispatch(ActionCreators.editShirt(shirt));
     } catch {
-        console.log('Error deleting shirt!');
+        console.log('Error editing shirt!');
     }
 }
