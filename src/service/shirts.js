@@ -10,8 +10,8 @@ export const GetShirts = async (dispatch) => {
         //api call to retrive the response.
         const { data } = await axiosInstance.get();
 
-        //Now that we have the response, we set the notes state and pass it the response to
-        //populate the notes with...notes :)
+        //Now that we have the response, we set the shirts state and pass it the response to
+        //populate the shirts with...shirts :)
         dispatch(ActionCreators.getShirts(data));
     } catch {
         console.log('Error fetching shirts!');
@@ -29,7 +29,7 @@ export const DeleteShirt = async (dispatch, shirt) => {
 
 export const AddShirt = async (dispatch, shirt) => {
     try {
-        //Note is currently a string so we make it into an object
+        //Shirt is currently a string so we make it into an object
         //for C# to parse properly.
         const { data } = await axiosInstance.post('', shirt);
         dispatch(ActionCreators.addShirt(data));
