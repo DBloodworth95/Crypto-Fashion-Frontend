@@ -12,6 +12,8 @@ export const ActionTypes = {
 export const ActionCreators = {
     getShirts: payload => ({ type: ActionTypes.GET_SHIRTS, payload }),
     addShirt: payload => ({ type: ActionTypes.ADD_SHIRT, payload }),
+    editShirt: payload => ({ type: ActionTypes.EDIT_SHIRT, payload }),
+    deleteShirt: payload => ({ type: ActionTypes.DELETE_SHIRT, payload }),
 }
 
 export default function ShirtReducer(state = initialState, action) {
