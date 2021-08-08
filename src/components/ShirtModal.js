@@ -36,30 +36,30 @@ const ShirtModal = ({ shirt, handleFormSubmit, show, handleClose }) => {
 
     return (
         <div style={{ textAlign: 'right' }}>
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Form onSubmit={event => {
-                event.preventDefault();
-                handleFormSubmit(dispatch, modalShirt);
-            }}>
-                <Modal.Body>
-                    <InputGroup>
-                        <FormControl value={modalShirt === null ? '' : modalShirt.shirtName}
-                            onChange={event => setModalShirt({ ...modalShirt, shirtName: event.target.value })} />
-                    </InputGroup>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button type='submit' variant="primary" onClick={handleClose}>
-                        Save
-                    </Button>
-                </Modal.Footer>
-            </Form>
-        </Modal>
+            <Modal show={show} onHide={handleClose} style={{ top: '30%' }} >
+                <Modal.Header closeButton>
+                    <Modal.Title>Add a shirt</Modal.Title>
+                </Modal.Header>
+                <Form onSubmit={event => {
+                    event.preventDefault();
+                    handleFormSubmit(dispatch, modalShirt);
+                }}>
+                    <Modal.Body>
+                        <InputGroup>
+                            <FormControl value={modalShirt === null ? '' : modalShirt.shirtName}
+                                onChange={event => setModalShirt({ ...modalShirt, shirtName: event.target.value })} />
+                        </InputGroup>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button type='submit' variant="primary" onClick={handleClose}>
+                            Save
+                        </Button>
+                    </Modal.Footer>
+                </Form>
+            </Modal>
         </div>
     );
 }
