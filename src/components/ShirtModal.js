@@ -35,6 +35,7 @@ const ShirtModal = ({ shirt, handleFormSubmit, show, handleClose }) => {
     }, [shirt]);
 
     return (
+        <div style={{ textAlign: 'right' }}>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
@@ -59,5 +60,6 @@ const ShirtModal = ({ shirt, handleFormSubmit, show, handleClose }) => {
                 </Modal.Footer>
             </Form>
         </Modal>
+        </div>
     );
 }
