@@ -17,7 +17,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import { TextField } from '@material-ui/core';
-import { ShirtTable } from '../ShirtTable';
+import { ShirtTable } from '../clothing/shirts/ShirtTable';
 
 const drawerWidth = 240;
 

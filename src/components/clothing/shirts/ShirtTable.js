@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { DeleteShirt, GetShirts } from '../service/shirts';
+import { DeleteShirt, GetShirts } from '../../../service/shirts';
 import { Button } from 'react-bootstrap';
 import { EditShirtModal, NewShirtModal } from './ShirtModal';
 import { red } from '@material-ui/core/colors';

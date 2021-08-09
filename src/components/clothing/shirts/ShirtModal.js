@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { InputGroup, Form, Modal, FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { AddShirt, EditShirt } from "../service/shirts";
+import { AddShirt, EditShirt } from "../../../service/shirts";
 
 export const NewShirtModal = () => {
     const [show, setShow] = useState(false);
