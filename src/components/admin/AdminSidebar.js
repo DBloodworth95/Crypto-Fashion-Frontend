@@ -14,6 +14,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import ShopIcon from '@material-ui/icons/Shop'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import LockIcon from '@material-ui/icons/Lock';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import SearchIcon from '@material-ui/icons/Search';
+import { TextField } from '@material-ui/core';
 import { ShirtTable } from '../ShirtTable';
 
 const drawerWidth = 240;
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing(3),
     },
+    searchBar: {
+        margin: '10px',
+    }
 }));
 
 export const AdminSidebar = () => {
@@ -64,6 +70,15 @@ export const AdminSidebar = () => {
                 anchor="left"
             >
                 <div className={classes.toolbar} />
+                <TextField id="outlined-basic" label="Search" variant="outlined" size="small" className={classes.searchBar}
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <SearchIcon />
+                            </InputAdornment>
+                        ),
+                    }}
+                />
                 <Divider />
                 <List>
                     {['Shirts', 'Bottoms', 'Shoes', 'Socks'].map((text, index) => (
