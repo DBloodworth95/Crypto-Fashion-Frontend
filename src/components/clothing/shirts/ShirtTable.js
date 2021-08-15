@@ -68,7 +68,6 @@ export const ShirtTable = () => {
                     <TableFooter>
                         <TableRow>
                             <TablePagination
-                                component="div"
                                 count={100}
                                 page={1}
                                 onPageChange={handleChangePage}
