@@ -1,16 +1,17 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { DeleteShirt, GetShirts } from '../../../service/shirts';
 import { Button } from 'react-bootstrap';
 import { EditShirtModal, NewShirtModal } from './ShirtModal';
 import { red } from '@material-ui/core/colors';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, TableFooter } from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { TablePagination } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,11 +22,22 @@ const useStyles = makeStyles((theme) => ({
 
 export const ShirtTable = () => {
     const classes = useStyles();
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     const shirts = useSelector(state => state.shirtReducer.shirts);
     const dispatch = useDispatch();
     useEffect(() => {
         GetShirts(dispatch);
     }, []);
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    }
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    }
 
     return <Fragment>
         <h3>Shirts</h3>
@@ -53,9 +65,20 @@ export const ShirtTable = () => {
                             </TableRow>
                         ))}
                     </TableBody>
+                    <TableFooter>
+                        <TableRow>
+                            <TablePagination
+                                component="div"
+                                count={100}
+                                page={1}
+                                onPageChange={handleChangePage}
+                                rowsPerPage={10}
+                                onRowsPerPageChange={handleChangeRowsPerPage}
+                            />
+                        </TableRow>
+                    </TableFooter>
                 </Table>
             </TableContainer>
-
         </div>
     </Fragment >
 }
