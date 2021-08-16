@@ -57,30 +57,30 @@ function TablePaginationActions(props) {
     return (
         <div className={classes.paginationActions}>
             <ThemeProvider theme={paginationTheme}>
-            <IconButton
-                onClick={handleFirstPageButtonClick}
-                disabled={page === 0}
-                aria-label="first page"
-            >
-                {paginationTheme.direction !== 'rtl' ? <LastPageIcon /> : <FirstPageIcon />}
-            </IconButton>
-            <IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
-                {paginationTheme.direction !== 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            </IconButton>
-            <IconButton
-                onClick={handleNextButtonClick}
-                disabled={page >= Math.ceil(count / rowsPerPage) - 1 }
-                aria-label="next page"
-            >
-                {paginationTheme.direction !== 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-            </IconButton>
-            <IconButton
-                onClick={handleLastPageButtonClick}
-                disabled={page >= Math.ceil(count / rowsPerPage) - 1 }
-                aria-label="last page"
-            >
-                {paginationTheme.direction !== 'rtl' ? <FirstPageIcon /> : <LastPageIcon />}
-            </IconButton>
+                <IconButton
+                    onClick={handleFirstPageButtonClick}
+                    disabled={page === 0}
+                    aria-label="first page"
+                >
+                    {paginationTheme.direction !== 'rtl' ? <LastPageIcon /> : <FirstPageIcon />}
+                </IconButton>
+                <IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
+                    {paginationTheme.direction !== 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                </IconButton>
+                <IconButton
+                    onClick={handleNextButtonClick}
+                    disabled={page >= Math.ceil(count / rowsPerPage) - 1}
+                    aria-label="next page"
+                >
+                    {paginationTheme.direction !== 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                </IconButton>
+                <IconButton
+                    onClick={handleLastPageButtonClick}
+                    disabled={page >= Math.ceil(count / rowsPerPage) - 1}
+                    aria-label="last page"
+                >
+                    {paginationTheme.direction !== 'rtl' ? <FirstPageIcon /> : <LastPageIcon />}
+                </IconButton>
             </ThemeProvider>
         </div>
     );
@@ -143,7 +143,7 @@ export const ShirtTable = () => {
                                 SelectProps={{
                                     inputProps: { 'aria-label': 'rows per page' },
                                     native: true,
-                                  }}
+                                }}
                                 onPageChange={handleChangePage}
                                 rowsPerPage={rowsPerPage}
                                 onRowsPerPageChange={handleChangeRowsPerPage}
