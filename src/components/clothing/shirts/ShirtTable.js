@@ -105,6 +105,7 @@ export const ShirtTable = () => {
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
+        GetShirts(dispatch, 0, parseInt(event.target.value, 10));
     }
 
     return <Fragment>
