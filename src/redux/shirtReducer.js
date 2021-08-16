@@ -1,5 +1,6 @@
 const initialState = {
     shirts: [],
+    totalShirts: 0,
 }
 
 export const ActionTypes = {
@@ -21,7 +22,7 @@ export default function ShirtReducer(state = initialState, action) {
         case ActionTypes.ADD_SHIRT:
             return { ...state, shirts: [...state.shirts, action.payload] };
         case ActionTypes.GET_SHIRTS:
-            return { ...state, shirts: [...action.payload] };
+            return { ...state, shirts: [...action.payload.data], totalShirts: action.payload.totalRowCount };
         case ActionTypes.DELETE_SHIRT:
             for (let i = 0; i < state.shirts.length; i++) {
                 if (state.shirts[i].id === action.payload.id) {

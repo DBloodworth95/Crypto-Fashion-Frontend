@@ -5,10 +5,10 @@ const axiosInstance = axios.create({
     baseURL: 'https://localhost:5001/clothes/',
 })
 
-export const GetShirts = async (dispatch) => {
+export const GetShirts = async (dispatch, pageNumber, pageSize) => {
     try {
         //api call to retrive the response.
-        const { data } = await axiosInstance.get('getallshirts');
+        const { data } = await axiosInstance.get(`getallshirts/`, { params: { PageNumber: pageNumber, PageSize: pageSize } });
 
         //Now that we have the response, we set the shirts state and pass it the response to
         //populate the shirts with...shirts :)
