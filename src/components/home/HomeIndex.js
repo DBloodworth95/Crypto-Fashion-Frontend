@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
     },
     cardMediaOverlay: {
         position: "absolute",
-        top: "10%",
+        top: "12%",
         width: "100%",
         textAlign: "center",
         color: "white",
