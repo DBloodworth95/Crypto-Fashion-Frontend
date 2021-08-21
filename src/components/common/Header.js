@@ -8,14 +8,14 @@ const useStyles = makeStyles(() => ({
         paddingLeft: "10px",
     },
     logo: {
-        fontFamily: "Work Sans, sans-serif",
+        fontFamily: "Roboto",
         fontWeight: "600",
         fontSize: "24px",
         color: "#000000",
         textAlign: "left",
     },
     menuButton: {
-        fontFamily: "Open Sans, sans-serif",
+        fontFamily: "Roboto",
         fontWeight: "600",
         fontSize: "16px",
         size: "18px",
