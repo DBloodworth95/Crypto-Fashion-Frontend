@@ -9,13 +9,15 @@ const useStyles = makeStyles(() => ({
     },
     logo: {
         fontFamily: "Work Sans, sans-serif",
-        fontWeight: 600,
+        fontWeight: "600",
+        fontSize: "24px",
         color: "#000000",
         textAlign: "left",
     },
     menuButton: {
         fontFamily: "Open Sans, sans-serif",
-        fontWeight: "700",
+        fontWeight: "600",
+        fontSize: "16px",
         size: "18px",
         color: "#000000"
     },
