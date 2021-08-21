@@ -54,8 +54,7 @@ const headerTitles = [
         label: "Login",
         href: "/login",
     },
-
-]
+];
 
 export const Header = () => {
     const { header, logo, menuButton, toolbar } = useStyles();
@@ -64,7 +63,7 @@ export const Header = () => {
         return <Toolbar className={toolbar}>
             {cryptoFashionLogo}
             {getMenuButtons()}
-            </Toolbar>
+        </Toolbar>
     };
 
     const cryptoFashionLogo = (
