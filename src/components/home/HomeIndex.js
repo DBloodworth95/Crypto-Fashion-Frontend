@@ -2,17 +2,18 @@ import React from "react";
 import { Footer } from "../common/Footer";
 import { Header } from "../common/Header";
 import Image from 'material-ui-image';
-import { makeStyles, Card, CardMedia, Typography } from "@material-ui/core";
+import { makeStyles, Card, CardMedia, Typography, Grid } from "@material-ui/core";
+import { FeaturedProductsRow } from "./FeaturedProductsRow";
 
 const useStyles = makeStyles(() => ({
     bannerCard: {
         position: "relative",
-        height: "600px",
+        height: "800px",
         marginBottom: "1rem"
     },
     cardMedia: {
         position: "relative",
-        height: "600px",
+        height: "800px",
     },
     cardMediaOverlay: {
         position: "absolute",
@@ -21,32 +22,29 @@ const useStyles = makeStyles(() => ({
         textAlign: "center",
         color: "white",
         backgroundColor: "none",
-        fontFamily: "Open Sans, sans-serif",
+        fontFamily: "Roboto",
         fontSize: "75px",
     },
-    body: {
-        display: "flex",
-        flexDirection: "column",
-        height: "auto"
-    },
-    mainLeftContent: {
-        float: "left",
-        width: "30%",
+    mainContent: {
         padding: "20px",
+        width: "100%",
+
+
+
         //Remove this crap below later
-        height: "800px", 
-        borderStyle: "solid",
-        borderColor: "black",
     },
-    mainRightContent: {
-        float: "left",
-        padding: "20px",
-        width: "70%",
-        //Remove this crap below later
-        height: "800px", 
-        borderStyle: "solid",
-        borderColor: "black",
+    mainContentHeader: {
+        textAlign: "center",
+        fontSize: "75px",
+        fontFamily: "Roboto",
+
+
     },
+    mainContentCardContainer: {
+        flexGrow: 1,
+        textAlign: "center",
+        width: "100%",
+    }
 }));
 
 export const HomeIndex = () => {
@@ -57,40 +55,38 @@ export const HomeIndex = () => {
             <header>
                 <Header />
             </header>
+            <article className={classes.bannerCard}>
+                <Card >
+                    <CardMedia className={classes.cardMedia} >
+                        <Image src="homebanner.jpg" imageStyle={{ height: "55%", width: "100%" }} />
+                    </CardMedia>
+                    <Typography gutterBottom variant="h1" component="h1" className={classes.cardMediaOverlay}>
+                        Welcome to CryptoFasion!
+                    </Typography>
+                </Card>
+            </article>
 
-            <body className={classes.body}>
-
-                <article className={classes.bannerCard}>
-                    <Card >
-                        <CardMedia className={classes.cardMedia} >
-                            <Image src="homebanner.jpg" imageStyle={{ height: "35%", width: "100%" }} />
-                        </CardMedia>
-                        <Typography gutterBottom variant="h1" component="h1" className={classes.cardMediaOverlay}>
-                            Welcome to CryptoFasion!
-                        </Typography>
-                    </Card>
+            <section>
+                <article className={classes.mainContent}>
+                    <Typography gutterBottom variant="h1" component="h1" className={classes.mainContentHeader}>
+                        Featured Products
+                    </Typography>
+                    <div className={classes.mainContentCardContainer}
+                    >
+                        <Grid container spacing={5}>
+                            <Grid container item xs={12} spacing={3}>
+                                <FeaturedProductsRow />
+                            </Grid>
+                            <Grid container item xs={12} spacing={3}>
+                                <FeaturedProductsRow />
+                            </Grid>
+                            <Grid container item xs={12} spacing={3}>
+                                <FeaturedProductsRow />
+                            </Grid>
+                        </Grid>
+                    </div>
                 </article>
-
-                <section>
-
-                <article className={classes.mainLeftContent}>
-                    <div>test</div>
-                    <div>test</div>
-                    <div>test</div>
-                    <div>test</div>
-                </article>
-
-                <article className={classes.mainRightContent}>
-                    <div>test</div>
-                    <div>test</div>
-                    <div>test</div>
-                    <div>test</div>
-                </article>
-
-                </section>
-
-            </body>
-
+            </section>
             <footer>
                 <Footer />
             </footer>
