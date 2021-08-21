@@ -12,11 +12,15 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     rootCard: {
-        maxWidth: 345,
+
     },
     mediaCard: {
-        height: 140,
+        height: 300,
+        objectFit: 'contain',
     },
+    cardText: {
+        fontFamily: "Roboto",
+    }
 }));
 
 export const FeaturedProductsRow = () => {
@@ -29,17 +33,17 @@ export const FeaturedProductsRow = () => {
                     <CardActionArea>
                         <CardMedia
                             className={classes.mediaCard}
-                            image="logo192.jpg"
+                            image="logo512.png"
                             title=""
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h5" component="h2" className={classes.cardText}>
                                 Product
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Description
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Price
                             </Typography>
                         </CardContent>
@@ -59,17 +63,17 @@ export const FeaturedProductsRow = () => {
                     <CardActionArea>
                         <CardMedia
                             className={classes.mediaCard}
-                            image="logo192.jpg"
+                            image="logo512.png"
                             title=""
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h5" component="h2" className={classes.cardText}>
                                 Product
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Description
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Price
                             </Typography>
                         </CardContent>
@@ -89,17 +93,17 @@ export const FeaturedProductsRow = () => {
                     <CardActionArea>
                         <CardMedia
                             className={classes.mediaCard}
-                            image="logo192.jpg"
+                            image="logo512.png"
                             title=""
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h5" component="h2" className={classes.cardText}>
                                 Product
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Description
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" className={classes.cardText}>
                                 Product Price
                             </Typography>
                         </CardContent>
