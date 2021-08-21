@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const FeaturedProductsRow = () => {
     const classes = useStyles();
-    
+
     return (
         <React.Fragment>
             <Grid item xs={4}>
