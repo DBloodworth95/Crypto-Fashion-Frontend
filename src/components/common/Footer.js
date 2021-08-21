@@ -1,9 +1,8 @@
 import { AppBar, Toolbar, Typography, makeStyles, Button } from "@material-ui/core";
 import { React, Fragment } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Container } from "@material-ui/core";
+import { Container, Divider } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
     footer: {
@@ -22,7 +21,7 @@ const useStyles = makeStyles(() => ({
     footerContainer: {
         width: "25%",
         textAlign: "left",
-        marginRight: "50%",
+        marginRight: "55%",
     },
     footerHeader: {
         fontFamily: "Open Sans, sans-serif",
@@ -35,7 +34,7 @@ const useStyles = makeStyles(() => ({
         fontWeight: "100",
         fontSize: "14px",
         color: "#FFFFFF",
-    }
+    },
 }));
 
 const footerTitles = [
@@ -54,6 +53,7 @@ export const Footer = () => {
                 <Grid item xs={4}>
                     <Typography className={classes.footerHeader}>Services</Typography>
                 </Grid>
+
                 <Grid item xs={4}>
                     <Typography className={classes.footerHeader}>Other</Typography>
                 </Grid>
@@ -69,9 +69,11 @@ export const Footer = () => {
                         <Grid item xs={4}>
                             <Typography className={classes.footerHeader}>About</Typography>
                         </Grid>
+
                         <Grid item xs={4}>
                             <Typography className={classes.footerHeader}>Services</Typography>
                         </Grid>
+
                         <Grid item xs={4}>
                             <Typography className={classes.footerHeader}>Other</Typography>
                         </Grid>
@@ -84,11 +86,36 @@ export const Footer = () => {
                             <Typography className={classes.footerContent}>Services</Typography>
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography className={classes.footerContent}>Other</Typography>
+                            <Typography className={classes.footerContent}>OtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOther</Typography>
                         </Grid>
                     </Grid>
                     <Grid container item xs={12} spacing={1}>
-
+                    </Grid>
+                    <Grid container item xs={12} spacing={1}>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>About</Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>Services</Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>OtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOther</Typography>
+                        </Grid>
+                    </Grid>
+                    <Grid container item xs={12} spacing={1}>
+                    </Grid>
+                    <Grid container item xs={12} spacing={1}>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>About</Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>Services</Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography className={classes.footerContent}>OtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOtherOther</Typography>
+                        </Grid>
+                    </Grid>
+                    <Grid container item xs={12} spacing={1}>
                     </Grid>
                 </Grid>
             </Container>
