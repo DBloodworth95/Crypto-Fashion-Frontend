@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
         marginTop: "1rem",
         padding: "2rem",
         backgroundColor: "#000000",
-        position: "fixed",
+        position: "relative",
         bottom: 0,
         left: 0,
         width: "100%",
