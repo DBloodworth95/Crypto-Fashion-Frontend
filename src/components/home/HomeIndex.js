@@ -28,22 +28,17 @@ const useStyles = makeStyles(() => ({
     mainContent: {
         padding: "20px",
         width: "100%",
-
-
-
-        //Remove this crap below later
     },
     mainContentHeader: {
         textAlign: "center",
         fontSize: "75px",
         fontFamily: "Roboto",
-
-
     },
     mainContentCardContainer: {
         flexGrow: 1,
         textAlign: "center",
         width: "100%",
+        padding: '100px'
     }
 }));
 
