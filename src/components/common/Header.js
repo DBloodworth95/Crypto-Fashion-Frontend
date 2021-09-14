@@ -54,7 +54,7 @@ const headerTitles = [
     },
     {
         label: "Login",
-        href: "/login",
+        href: "Login",
     },
 ];
 
